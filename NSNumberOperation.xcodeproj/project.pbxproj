@@ -14,9 +14,12 @@
 		298FECDC204A8AA100368557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298FECDA204A8AA100368557 /* LaunchScreen.storyboard */; };
 		298FECDF204A8AA100368557 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 298FECDE204A8AA100368557 /* main.m */; };
 		298FECE8204A8AF500368557 /* NSNumber+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 298FECE7204A8AF500368557 /* NSNumber+Operation.m */; };
+		29C56F9721A4F10A00DCDA29 /* NSNumberOperation.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 29C56F9621A4F10A00DCDA29 /* NSNumberOperation.podspec */; };
+		AE242CC93A687BF844F214C0 /* Pods_NSNumberOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E1CE6C6EA8B6194BA8BD7 /* Pods_NSNumberOperation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ABA3A55A6C984B105DE48B5 /* Pods-NSNumberOperation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSNumberOperation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NSNumberOperation/Pods-NSNumberOperation.debug.xcconfig"; sourceTree = "<group>"; };
 		298FECCC204A8AA100368557 /* NSNumberOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSNumberOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		298FECCF204A8AA100368557 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		298FECD0204A8AA100368557 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +32,9 @@
 		298FECDE204A8AA100368557 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		298FECE6204A8AF500368557 /* NSNumber+Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Operation.h"; sourceTree = "<group>"; };
 		298FECE7204A8AF500368557 /* NSNumber+Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Operation.m"; sourceTree = "<group>"; };
+		29C56F9621A4F10A00DCDA29 /* NSNumberOperation.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NSNumberOperation.podspec; sourceTree = SOURCE_ROOT; };
+		59745DDD114034423F7B2842 /* Pods-NSNumberOperation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSNumberOperation.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSNumberOperation/Pods-NSNumberOperation.release.xcconfig"; sourceTree = "<group>"; };
+		6C2E1CE6C6EA8B6194BA8BD7 /* Pods_NSNumberOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSNumberOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE242CC93A687BF844F214C0 /* Pods_NSNumberOperation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +54,8 @@
 			children = (
 				298FECCE204A8AA100368557 /* NSNumberOperation */,
 				298FECCD204A8AA100368557 /* Products */,
+				A3B3B7C816B9F2F7D0654D06 /* Pods */,
+				F9892FFEB048CA6FD410ACFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +70,7 @@
 		298FECCE204A8AA100368557 /* NSNumberOperation */ = {
 			isa = PBXGroup;
 			children = (
+				29C56F9621A4F10A00DCDA29 /* NSNumberOperation.podspec */,
 				298FECE5204A8ADA00368557 /* NumberOperation */,
 				298FECCF204A8AA100368557 /* AppDelegate.h */,
 				298FECD0204A8AA100368557 /* AppDelegate.m */,
@@ -84,6 +94,23 @@
 			path = NumberOperation;
 			sourceTree = "<group>";
 		};
+		A3B3B7C816B9F2F7D0654D06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ABA3A55A6C984B105DE48B5 /* Pods-NSNumberOperation.debug.xcconfig */,
+				59745DDD114034423F7B2842 /* Pods-NSNumberOperation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9892FFEB048CA6FD410ACFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C2E1CE6C6EA8B6194BA8BD7 /* Pods_NSNumberOperation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298FECE2204A8AA100368557 /* Build configuration list for PBXNativeTarget "NSNumberOperation" */;
 			buildPhases = (
+				74ECA656614AE36ADA68D7A2 /* [CP] Check Pods Manifest.lock */,
 				298FECC8204A8AA100368557 /* Sources */,
 				298FECC9204A8AA100368557 /* Frameworks */,
 				298FECCA204A8AA100368557 /* Resources */,
+				98D88EEE1D8DB4FE72A34526 /* [CP] Embed Pods Frameworks */,
+				AD12B720D6EFBA69FE652E8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C56F9721A4F10A00DCDA29 /* NSNumberOperation.podspec in Resources */,
 				298FECDC204A8AA100368557 /* LaunchScreen.storyboard in Resources */,
 				298FECD9204A8AA100368557 /* Assets.xcassets in Resources */,
 				298FECD7204A8AA100368557 /* Main.storyboard in Resources */,
@@ -149,6 +180,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74ECA656614AE36ADA68D7A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSNumberOperation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98D88EEE1D8DB4FE72A34526 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NSNumberOperation/Pods-NSNumberOperation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NSNumberOperation/NSNumberOperation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSNumberOperation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NSNumberOperation/Pods-NSNumberOperation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD12B720D6EFBA69FE652E8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NSNumberOperation/Pods-NSNumberOperation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		298FECC8204A8AA100368557 /* Sources */ = {
@@ -290,6 +375,7 @@
 		};
 		298FECE3204A8AA100368557 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABA3A55A6C984B105DE48B5 /* Pods-NSNumberOperation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +390,7 @@
 		};
 		298FECE4204A8AA100368557 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59745DDD114034423F7B2842 /* Pods-NSNumberOperation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

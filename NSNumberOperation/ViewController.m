@@ -53,8 +53,8 @@
 }
 - (IBAction)addSubMulDiv:(id)sender {
     [self.view endEditing:YES];
-    NSNumber *text2 = (NSNumber *)self.text2.text;
-    self.resultLabel.text = [N(self.text1.text).add(text2).sub(text2).mul(text2).div(text2).scale2() stringValue];
+    NSNumber *num2 = (NSNumber *)self.text2.text;
+    self.resultLabel.text = [N(self.text1.text).add(num2).sub(num2).mul(num2).div(num2).scale2() stringValue];
 }
 
 
