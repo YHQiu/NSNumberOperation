@@ -1,7 +1,7 @@
 //
 //  NSNumber+Operation.h
 //  NSNumberOperation
-//
+//  https://github.com/YHQiu/NSNumberOperation
 //  Created by 邱弘宇 on 2018/3/3.
 //  Copyright © 2018年 邱弘宇. All rights reserved.
 //
@@ -14,10 +14,17 @@
 #import <Foundation/Foundation.h>
 
 #ifndef __custom_nsnumber_operation_precisionlength_define__
+
 /**
  计算过程中的精度
  */
 #define kPrecisionLength 6
+
+/**
+ 比较过程中的精度
+ */
+#define kComparePrecisionLength 3
+
 #endif
 
 #ifndef __custom_nsnumber_operation_simple_define__

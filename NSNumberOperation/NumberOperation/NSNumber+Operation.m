@@ -1,7 +1,7 @@
 //
 //  NSNumber+Operation.m
 //  NSNumberOperation
-//
+//  https://github.com/YHQiu/NSNumberOperation
 //  Created by 邱弘宇 on 2018/3/3.
 //  Copyright © 2018年 邱弘宇. All rights reserved.
 //
@@ -22,8 +22,11 @@
 @end
 
 @interface NSNumber(Operation)
+
 + (NSDecimalNumber *)accuracyLostWithNumberHandle:(NSNumber *)value;
+
 + (NSDecimalNumber *)accuracyLostWithNumberHandle:(NSNumber *)value withScale:(short)scale ;
+
 @end
 
 @implementation NSNumber (Compare)
@@ -56,6 +59,10 @@
         }
         else{
             NSLog(@"Number Handle_----____Warning %@,Please Check",handleValue);
+#if DEBUG
+            NSString *errstr = [NSString stringWithFormat:@"Number Handle_----____Warning %@,Please Check",handleValue];
+            NSAssert(1,errstr);
+#endif
             return [NSDecimalNumber decimalNumberWithString:@"0"];;
         }
     }
@@ -228,7 +235,7 @@
 }
 
 - (BOOL)equal:(NSNumber *)number{
-    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:3];
+    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:kComparePrecisionLength];
     if (result == NSOrderedSame) {
         return YES;
     }
@@ -238,7 +245,7 @@
 }
 
 - (BOOL)lessThan:(NSNumber *)number{
-    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:3];
+    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:kComparePrecisionLength];
     if (result == NSOrderedAscending) {
         return YES;
     }
@@ -248,7 +255,7 @@
 }
 
 - (BOOL)lessThanOrEqual:(NSNumber *)number{
-    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:3];
+    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:kComparePrecisionLength];
     if (result == NSOrderedAscending || result == NSOrderedSame) {
         return YES;
     }
@@ -258,7 +265,7 @@
 }
 
 - (BOOL)greaterThan:(NSNumber *)number{
-    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:3];
+    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:kComparePrecisionLength];
     if (result == NSOrderedDescending) {
         return YES;
     }
@@ -268,7 +275,7 @@
 }
 
 - (BOOL)greaterThanOrEqual:(NSNumber *)number{
-    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:3];
+    NSComparisonResult result = [NSNumber compareForNumberHandle:self withParameter:number withScale:kComparePrecisionLength];
     if (result == NSOrderedDescending || result == NSOrderedSame) {
         return YES;
     }
@@ -277,6 +284,9 @@
     }
 }
 
+/**
+ Multiple
+ */
 - (NSDecimalNumber *)mul:(NSNumber *)number{
     NSDecimalNumber *number1 = [NSNumber accuracyLostWithNumberHandle:self];
     NSDecimalNumber *number2 = [NSNumber accuracyLostWithNumberHandle:number];
@@ -284,18 +294,36 @@
     return [[NSDecimalNumber alloc]initWithDecimal:[dNum decimalValue]];
 }
 
+/**
+ Div
+ */
 - (NSDecimalNumber *)div:(NSNumber *)number{
     NSDecimalNumber *number1 = [NSNumber accuracyLostWithNumberHandle:self];
     NSDecimalNumber *number2 = [NSNumber accuracyLostWithNumberHandle:number];
+    if (number2.equal(@(0))) {
+        NSLog(@"Number Handle_----____Warning,Please Check %@ / %@",number1,number2);
+#if DEBUG
+        NSAssert(1, @"Number Handle_----____Warning,Please Check %@/%@",number1,number2);
+#endif
+        return number1;
+    }
     NSDecimalNumber *dNum = [number1 decimalNumberByDividingBy:number2];
     return [[NSDecimalNumber alloc]initWithDecimal:[dNum decimalValue]];
 }
+
+/**
+ Addional
+ */
 - (NSDecimalNumber *)add:(NSNumber *)number{
     NSDecimalNumber *number1 = [NSNumber accuracyLostWithNumberHandle:self];
     NSDecimalNumber *number2 = [NSNumber accuracyLostWithNumberHandle:number];
     NSDecimalNumber *dNum = [number1 decimalNumberByAdding:number2];
     return [[NSDecimalNumber alloc]initWithDecimal:[dNum decimalValue]];
 }
+
+/**
+ Subtract
+ */
 - (NSDecimalNumber *)sub:(NSNumber *)number{
     NSDecimalNumber *number1 = [NSNumber accuracyLostWithNumberHandle:self];
     NSDecimalNumber *number2 = [NSNumber accuracyLostWithNumberHandle:number];
