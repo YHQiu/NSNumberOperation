@@ -1,0 +1,16 @@
+PODS:
+  - NSNumberOperation (0.1.0)
+
+DEPENDENCIES:
+  - NSNumberOperation (from `./`)
+
+EXTERNAL SOURCES:
+  NSNumberOperation:
+    :path: ./
+
+SPEC CHECKSUMS:
+  NSNumberOperation: 970273ebdef8fc6af6303f3250377bdee702c9f3
+
+PODFILE CHECKSUM: 460206dd5e346e2a535ee30e26fce37b110e0437
+
+COCOAPODS: 1.3.1

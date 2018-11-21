@@ -1,0 +1,6 @@
+framework module Pods_NSNumberOperation {
+  umbrella header "Pods-NSNumberOperation-umbrella.h"
+
+  export *
+  module * { export * }
+}
